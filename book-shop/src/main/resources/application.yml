@@ -6,6 +6,7 @@ spring:
       uri: mongodb://localhost:27017
       database: Book-Shop
       auto-index-creation: on
+
   jackson:
     default-property-inclusion: non_null
     serialization-inclusion: non_null
@@ -19,3 +20,5 @@ server:
   error:
     include-message: always
     # include-stacktrace: never
+
+
