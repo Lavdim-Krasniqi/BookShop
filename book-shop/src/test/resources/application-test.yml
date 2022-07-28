@@ -1,0 +1,33 @@
+  name: test
+
+  spring:
+    config:
+      activate:
+        on-profile: test
+    main:
+      web-application-type: NONE
+#    allow-bean-definition-overriding: true
+      lazy-initialization: true
+    data:
+      mongodb:
+        uri: mongodb://localhost:27017
+        database: bookshop
+        auto-index-creation: on
+    jackson:
+      default-property-inclusion: non_null
+      serialization-inclusion: non_null
+    output:
+      ansi:
+        enabled: ALWAYS
+
+    mongodb:
+      embedded:
+        version: 3.0.0
+
+  server:
+    shutdown: graceful
+    port: 9090
+    error:
+      include-message: always
+      include-stacktrace: never
+
