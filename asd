@@ -1,0 +1,43 @@
+[33mcommit 82c3ee15be5895fab66b2adff2c335fc10ee68b9[m[33m ([m[1;36mHEAD -> [m[1;32meroni[m[33m)[m
+Author: ehalili <eronnhalili@gmail.com>
+Date:   Thu Jul 28 09:56:47 2022 +0200
+
+    second commit from Eroni
+
+[33mcommit e2cb532985b6a5317fc4e01002dd010f84ad25d9[m
+Merge: 1445cf1 2ab7bdb
+Author: ehalili <eronnhalili@gmail.com>
+Date:   Wed Jun 29 15:15:46 2022 +0200
+
+    TUNG
+
+[33mcommit 1445cf1c8df7ec429da4937c88a9020d38546d53[m
+Merge: f078018 10949ba
+Author: ehalili <eronnhalili@gmail.com>
+Date:   Wed Jun 29 15:13:16 2022 +0200
+
+    TUNG
+
+[33mcommit 2ab7bdbec31b65fb995bcf49f7e6800bc5675843[m
+Author: Lavdim <lavdimkrasniqi99@gmail.com>
+Date:   Wed Jun 29 14:53:02 2022 +0200
+
+    Second commit
+
+[33mcommit f07801894e5739e57fb52a29241a83642e173f2d[m
+Author: ehalili <eronnhalili@gmail.com>
+Date:   Wed Jun 29 10:13:32 2022 +0200
+
+    my message
+
+[33mcommit 10949ba5078ace7a067f523c2f046c1837bfbb03[m
+Author: Lavdim <lavdimkrasniqi99@gmail.com>
+Date:   Wed Jun 29 10:04:13 2022 +0200
+
+    first commit
+
+[33mcommit ea04395c06bee3c090cb326a32698ec724947b55[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Lavdim-Krasniqi <74470361+Lavdim-Krasniqi@users.noreply.github.com>
+Date:   Wed Jun 29 09:18:18 2022 +0200
+
+    Initial commit
