@@ -1,8 +1,8 @@
-package elbatech.bookshop.userBooks.repositories;
+package elbatech.bookshop.userBook.repositories;
 
 
 import com.mongodb.client.result.UpdateResult;
-import elbatech.bookshop.userBooks.entities.UserBook;
+import elbatech.bookshop.userBook.entities.UserBook;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.val;

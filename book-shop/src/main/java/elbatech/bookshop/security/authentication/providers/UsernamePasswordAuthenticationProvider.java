@@ -1,6 +1,6 @@
 package elbatech.bookshop.security.authentication.providers;
 
-import elbatech.bookshop.security.users.services.UserDetailsService;
+import elbatech.bookshop.user.services.UserDetailsService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;

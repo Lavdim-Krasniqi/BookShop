@@ -9,8 +9,4 @@ import org.springframework.test.context.ActiveProfiles;
 
 class BookShopApplicationTests {
 
-    @Test
-    public void balg() {
-
-    }
 }

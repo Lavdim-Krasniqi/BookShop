@@ -1,10 +1,8 @@
-package elbatech.bookshop.notifications.controllers;
+package elbatech.bookshop.notification.controllers;
 
-import elbatech.bookshop.notifications.services.NotificationService;
+import elbatech.bookshop.notification.services.NotificationService;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

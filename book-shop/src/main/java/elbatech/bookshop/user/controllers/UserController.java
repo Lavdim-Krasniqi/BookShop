@@ -1,9 +1,8 @@
-package elbatech.bookshop.users.controllers;
+package elbatech.bookshop.user.controllers;
 
-import elbatech.bookshop.users.entities.User;
-import elbatech.bookshop.users.entities.UserDto;
-import elbatech.bookshop.users.entities.UserEmail;
-import elbatech.bookshop.users.services.UserService;
+import elbatech.bookshop.user.entities.User;
+import elbatech.bookshop.user.entities.UserDto;
+import elbatech.bookshop.user.services.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

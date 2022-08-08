@@ -1,27 +1,19 @@
-package elbatech.bookshop.Publisher.Entity;
+package elbatech.bookshop.publisher.Entity;
 
-import lombok.AllArgsConstructor;
+import elbatech.bookshop.base.BaseEntity;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.Instant;
-
-@Document
-@AllArgsConstructor
-@NoArgsConstructor
+@Document("Publisher")
 @Getter
 @Setter
-public class Publisher{
+public class Publisher extends BaseEntity {
     public static final String ID = "id";
+    public static final String NAME = "name";
+    public static final String COUNTRY = "country";
 
-    private String id;
     private String name;
     private String country;
-
-    @CreatedDate
-    private Instant createdDate;
 
 }

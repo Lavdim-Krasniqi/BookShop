@@ -1,16 +1,12 @@
-package elbatech.bookshop.notifications.services;
+package elbatech.bookshop.notification.services;
 
-import elbatech.bookshop.notifications.entities.Notification;
-import elbatech.bookshop.notifications.repositories.NotificationRepository;
+import elbatech.bookshop.notification.entities.Notification;
+import elbatech.bookshop.notification.repositories.NotificationRepository;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import javax.websocket.server.ServerEndpoint;
-import java.util.List;
 
 @Service
 @AllArgsConstructor

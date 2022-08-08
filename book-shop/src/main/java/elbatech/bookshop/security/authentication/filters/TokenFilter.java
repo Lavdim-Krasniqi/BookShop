@@ -1,10 +1,14 @@
 package elbatech.bookshop.security.authentication.filters;
 
+import elbatech.bookshop.exception.customException.RequiredTokenException;
 import elbatech.bookshop.security.authentication.providers.TokenAuthentication;
+import elbatech.bookshop.security.authentication.utility.JwtTokenUtil;
+import io.jsonwebtoken.ExpiredJwtException;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
@@ -33,14 +37,21 @@ public class TokenFilter extends OncePerRequestFilter {
         String token = request.getHeader("Authorization");
 
         if (token == null) {
-            filterChain.doFilter(request, response);
+            if (request.getServletPath().equals("/user/addUser")) {
+                filterChain.doFilter(request, response);
+                return;
+            }
+            exceptionResolver.resolveException(request, response, null, new RequiredTokenException("Token shouldn't be null"));
         } else {
             val authentication = new TokenAuthentication(token, null);
             try {
                 Authentication a = manager.authenticate(authentication);
                 SecurityContextHolder.getContext().setAuthentication(a);
                 filterChain.doFilter(request, response);
-            } catch (Exception e) {
+            } catch (BadCredentialsException e) {
+                exceptionResolver.resolveException(request, response, null, e);
+                response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+            } catch (ExpiredJwtException e){
                 exceptionResolver.resolveException(request, response, null, e);
                 response.setStatus(HttpServletResponse.SC_FORBIDDEN);
             }

@@ -1,11 +1,11 @@
-package elbatech.bookshop.userBooks.services;
+package elbatech.bookshop.userBook.services;
 
 import com.mongodb.client.result.UpdateResult;
 import elbatech.bookshop.book.services.BookService;
 import elbatech.bookshop.page.Service.PageService;
-import elbatech.bookshop.userBooks.entities.UserBook;
-import elbatech.bookshop.userBooks.entities.UserBookDto;
-import elbatech.bookshop.userBooks.repositories.UserBookRepository;
+import elbatech.bookshop.userBook.entities.UserBook;
+import elbatech.bookshop.userBook.entities.UserBookDto;
+import elbatech.bookshop.userBook.repositories.UserBookRepository;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.data.domain.Page;

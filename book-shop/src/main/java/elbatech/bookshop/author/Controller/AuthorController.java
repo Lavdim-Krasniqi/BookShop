@@ -1,24 +1,23 @@
-package elbatech.bookshop.Author.Controller;
+package elbatech.bookshop.author.Controller;
 
 import com.mongodb.client.result.DeleteResult;
-import elbatech.bookshop.Author.Entity.Author;
-import elbatech.bookshop.Author.Service.AuthorService;
-import org.springframework.beans.factory.annotation.Autowired;
+import elbatech.bookshop.author.Entity.Author;
+import elbatech.bookshop.author.Service.AuthorService;
+import lombok.AllArgsConstructor;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/author")
+@AllArgsConstructor
 public class AuthorController {
-
-    @Autowired
     AuthorService authorService;
 
-
     @PostMapping("/addAuthor")
-    public Author addAuthor(@RequestBody Author author) {
+    public Author addAuthor(@Valid @RequestBody Author author) {
         return authorService.addAuthor(author);
     }
 
@@ -51,6 +50,11 @@ public class AuthorController {
     @GetMapping("/getByCountry/{country}")
     public List<Author> getByCountry(@PathVariable String country) {
         return authorService.getByCountry(country);
+    }
+
+    @GetMapping("/getAuthorsByIds")
+    public List<Author> getAuthorsByIds(@RequestBody List<String> ids) {
+        return authorService.getAuthorsByIds(ids);
     }
 
 

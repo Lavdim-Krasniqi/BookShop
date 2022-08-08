@@ -1,18 +1,21 @@
-package elbatech.bookshop.Publisher.Service;
+package elbatech.bookshop.publisher.Service;
 
 import com.mongodb.client.result.DeleteResult;
-import elbatech.bookshop.Publisher.Entity.Publisher;
-import elbatech.bookshop.Publisher.Repository.PublisherRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import elbatech.bookshop.publisher.Entity.Publisher;
+import elbatech.bookshop.publisher.Repository.PublisherRepository;
+import lombok.AllArgsConstructor;
+import lombok.ToString;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor
+@ToString
 public class ServicePublisher {
 
-    @Autowired
     PublisherRepository publisherRepository;
+
     public Publisher addPublisher(Publisher publisher) {
         return publisherRepository.addPublisher(publisher);
     }
@@ -32,4 +35,10 @@ public class ServicePublisher {
     public List<Publisher> getAllPublishers() {
         return publisherRepository.getAllPublishers();
     }
+
+    public boolean checkIfAllGivenPublishersAreRegistered(List<String> publishersIds) {
+        return publisherRepository.checkIfAllGivenPublishersAreRegistered(publishersIds);
+    }
+
+
 }

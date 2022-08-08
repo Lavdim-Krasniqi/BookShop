@@ -1,7 +1,7 @@
 package elbatech.bookshop.security;
 
-import elbatech.bookshop.security.users.entities.User;
-import elbatech.bookshop.security.users.repositories.UserRepository;
+import elbatech.bookshop.user.entities.User;
+import elbatech.bookshop.user.repositories.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,13 +18,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @ActiveProfiles("test")
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class AuthenticationTests {
-    @Autowired
-    TestRestTemplate testRestTemplate;
+
     @Autowired
     UserRepository repository;
 
+    @Autowired
+    TestRestTemplate testRestTemplate;
 
     @Test
     public void checkIfRepoIsNotNull() {

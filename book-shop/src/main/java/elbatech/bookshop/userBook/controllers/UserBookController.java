@@ -1,9 +1,9 @@
-package elbatech.bookshop.userBooks.controllers;
+package elbatech.bookshop.userBook.controllers;
 
 import com.mongodb.client.result.UpdateResult;
-import elbatech.bookshop.userBooks.entities.UserBook;
-import elbatech.bookshop.userBooks.entities.UserBookDto;
-import elbatech.bookshop.userBooks.services.UserBookService;
+import elbatech.bookshop.userBook.entities.UserBook;
+import elbatech.bookshop.userBook.entities.UserBookDto;
+import elbatech.bookshop.userBook.services.UserBookService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;

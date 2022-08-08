@@ -1,4 +1,4 @@
-package elbatech.bookshop.userBooks.entities;
+package elbatech.bookshop.userBook.entities;
 
 import elbatech.bookshop.base.BaseEntity;
 import lombok.Builder;
@@ -8,8 +8,6 @@ import org.springframework.data.mongodb.core.index.CompoundIndex;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
-
-import java.util.List;
 
 @Document("User_Books")
 @Getter

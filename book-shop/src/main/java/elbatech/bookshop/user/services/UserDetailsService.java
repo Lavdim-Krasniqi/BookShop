@@ -1,8 +1,8 @@
-package elbatech.bookshop.users.services;
+package elbatech.bookshop.user.services;
 
-import elbatech.bookshop.users.repositories.UserRepository;
-import elbatech.bookshop.users.entities.SecurityUser;
-import elbatech.bookshop.users.entities.User;
+import elbatech.bookshop.user.repositories.UserRepository;
+import elbatech.bookshop.user.entities.SecurityUser;
+import elbatech.bookshop.user.entities.User;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

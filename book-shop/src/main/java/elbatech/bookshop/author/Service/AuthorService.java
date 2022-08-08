@@ -1,22 +1,19 @@
-package elbatech.bookshop.Author.Service;
+package elbatech.bookshop.author.Service;
 
 import com.mongodb.client.result.DeleteResult;
-import elbatech.bookshop.Author.Entity.Author;
-import elbatech.bookshop.Author.Repository.AuthorRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import elbatech.bookshop.author.Entity.Author;
+import elbatech.bookshop.author.Repository.AuthorRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class AuthorService {
 
-    @Autowired
     AuthorRepository authorRepository;
-    @Autowired
-    Author author;
 
-    
     public Author addAuthor(Author author) {
         return authorRepository.addAuthor(author);
     }
@@ -37,13 +34,19 @@ public class AuthorService {
         return authorRepository.getAllAuthors();
     }
 
-
     public Author findAuthorByNameOrSurname(String name) {
         return authorRepository.findAuthorByNameOrSurname(name);
     }
 
     public List<Author> getByCountry(String country) {
         return authorRepository.getByCountry(country);
+    }
+
+    public boolean checkIfAllGivenAuthorsAreRegistered(List<String> authorsIds) {
+        return authorRepository.checkIfAllGivenAuthorsAreRegistered(authorsIds);
+    }
+    public List<Author> getAuthorsByIds(List<String> ids) {
+        return authorRepository.getAuthorsByIds(ids);
     }
 
 

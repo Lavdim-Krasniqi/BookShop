@@ -1,19 +1,24 @@
-package elbatech.bookshop.Page.Service;
+package elbatech.bookshop.page.Service;
 
 import com.mongodb.client.result.DeleteResult;
-import elbatech.bookshop.Page.Entity.Page;
-import elbatech.bookshop.Page.Repository.PageRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import elbatech.bookshop.book.services.BookService;
+import elbatech.bookshop.page.Entity.Page;
+import elbatech.bookshop.page.Repository.PageRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
+@AllArgsConstructor
 public class PageService {
-    @Autowired
+
     PageRepository pageRepository;
+    BookService bookService;
+
     public Page addPage(Page page) {
-        return pageRepository.addPage(page);
+        if (bookService.doesExists(page.getBookId()))
+            return pageRepository.addPage(page);
+
+        throw new RuntimeException("Given book id does not exists in out database.");
     }
 
     public DeleteResult deletePage(String id) {
@@ -21,16 +26,19 @@ public class PageService {
     }
 
 
-
     public Page getPageById(String id) {
         return pageRepository.getPageById(id);
     }
 
-    public List<Page> getAllPages() {
-        return pageRepository.getAllPages();
+    public org.springframework.data.domain.Page<Page> getAllPages(Integer page, Integer size) {
+        return pageRepository.getAllPages(page, size);
     }
 
     public Page editPage(Page page) {
         return pageRepository.editPage(page);
+    }
+
+    public boolean doesExists(Integer pageNumber, String bookId) {
+        return pageRepository.doesExists(pageNumber, bookId);
     }
 }

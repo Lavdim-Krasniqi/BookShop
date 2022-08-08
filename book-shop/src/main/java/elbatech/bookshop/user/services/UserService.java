@@ -1,9 +1,8 @@
-package elbatech.bookshop.users.services;
+package elbatech.bookshop.user.services;
 
-import elbatech.bookshop.users.entities.User;
-import elbatech.bookshop.users.entities.UserDto;
-import elbatech.bookshop.users.entities.UserEmail;
-import elbatech.bookshop.users.repositories.UserRepository;
+import elbatech.bookshop.user.entities.User;
+import elbatech.bookshop.user.entities.UserDto;
+import elbatech.bookshop.user.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

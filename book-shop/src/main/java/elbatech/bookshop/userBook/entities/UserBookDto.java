@@ -1,4 +1,4 @@
-package elbatech.bookshop.userBooks.entities;
+package elbatech.bookshop.userBook.entities;
 
 import lombok.Data;
 

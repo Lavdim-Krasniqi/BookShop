@@ -1,4 +1,4 @@
-package elbatech.bookshop.notifications.entities;
+package elbatech.bookshop.notification.entities;
 
 import elbatech.bookshop.base.BaseEntity;
 import lombok.*;

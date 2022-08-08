@@ -1,8 +1,8 @@
-package elbatech.bookshop.users.repositories;
+package elbatech.bookshop.user.repositories;
 
 import com.mongodb.client.result.DeleteResult;
-import elbatech.bookshop.users.entities.User;
-import elbatech.bookshop.users.entities.UserEmail;
+import elbatech.bookshop.user.entities.User;
+import elbatech.bookshop.user.entities.UserEmail;
 import lombok.AllArgsConstructor;
 import lombok.val;
 import org.springframework.data.mongodb.core.MongoTemplate;

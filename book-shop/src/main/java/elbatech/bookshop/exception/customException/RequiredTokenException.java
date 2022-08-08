@@ -1,4 +1,4 @@
-package elbatech.bookshop.exception;
+package elbatech.bookshop.exception.customException;
 
 public class RequiredTokenException extends RuntimeException {
 
